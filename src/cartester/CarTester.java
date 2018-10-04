@@ -18,15 +18,11 @@ public class CarTester {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        String carChoice = JOptionPane.showInputDialog(
-      "Please Enter the type of Car:");
      
         
-        if(carChoice.equals("1")){
-            System.out.println("sup");
+        
         }
                 
     }
     
-}
+

@@ -14,6 +14,41 @@ package cartester;
  */
 public class Car{
     
-  String typeOfPhone, CivChoice;
+  String model, make, heatedSeats, remoteStart;
+  int year, randomNum; 
+  double price;
+  
+  public Car(){
+      model = "Cherokee";
+      make = "Jeep";
+      year = 2016;
+      price = 25500.50;
+      randomNum = (int) (Math.random() * 3 + 1);
+      if(randomNum==1){
+          heatedSeats = "Heated Seats";
+      }else if(randomNum==2){
+          remoteStart = "Remote Starter";
+      }else{
+          heatedSeats = "Heated Seats!";
+          remoteStart = "Remote Starter";
+      } 
+  }
+  public Car(String _model,String _make, String _heatedSeats, String _remoteStart,
+          int _year, int _randomNum, double _price){
+      
+      _make = "Dodge";
+      _model = "Challenger";
+      _year = 2018;
+      _price = 30000.52;
+       _randomNum = (int) (Math.random() * 3 + 1);
+      if(randomNum==1){
+          heatedSeats = "Heated Seats";
+      }else if(randomNum==2){
+          remoteStart = "Remote Starter";
+      }else{
+          heatedSeats = "Heated Seats!";
+          remoteStart = "Remote Starter";
+      }
+  }
   
 }
