@@ -19,11 +19,14 @@ public class Car{
   double price;
   
   public Car(){
+      
       model = "Cherokee";
       make = "Jeep";
       year = 2016;
-      price = 25500.50;
+      price = 25495.99;
+      
       randomNum = (int) (Math.random() * 3 + 1);
+      
       if(randomNum==1){
           heatedSeats = "Yes";
           remoteStart = "No";
@@ -46,6 +49,7 @@ public class Car{
       remoteStart = _remoteStart;
   }
   public Car (String model3, String make3){
+      
       make = make3;
       model = model3;
       year = 2019;
@@ -73,6 +77,7 @@ public class Car{
       
   
   public String toString() {
+      
       String output = "Make: " + make + "\n" +
               "Model: "+ model + "\n" +
               "Year: " + year + "\n" +
