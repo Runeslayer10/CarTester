@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Blake Hadaway
+ * October 5th, 2018
+ * The program displays 3 cars and honks the horns
  */
 
 package cartester;
