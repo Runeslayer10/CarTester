@@ -15,7 +15,7 @@ package cartester;
 public class Car{
     
   String model, make, heatedSeats, remoteStart;
-  int year, randomNum; 
+  int year, randomNum, randomNum2; 
   double price;
   
   public Car(){
@@ -25,30 +25,61 @@ public class Car{
       price = 25500.50;
       randomNum = (int) (Math.random() * 3 + 1);
       if(randomNum==1){
-          heatedSeats = "Heated Seats";
+          heatedSeats = "Yes";
+          remoteStart = "No";
       }else if(randomNum==2){
-          remoteStart = "Remote Starter";
+          remoteStart = "Yes";
+          heatedSeats = "No";
       }else{
-          heatedSeats = "Heated Seats!";
-          remoteStart = "Remote Starter";
+          heatedSeats = "Yes";
+          remoteStart = "Yes";
       } 
   }
-  public Car(String _model,String _make, String _heatedSeats, String _remoteStart,
-          int _year, int _randomNum, double _price){
+  public Car(String _model, String _make, String _heatedSeats, String _remoteStart,
+          int _year, double _price){
       
-      _make = "Dodge";
-      _model = "Challenger";
-      _year = 2018;
-      _price = 30000.52;
-       _randomNum = (int) (Math.random() * 3 + 1);
-      if(randomNum==1){
-          heatedSeats = "Heated Seats";
-      }else if(randomNum==2){
-          remoteStart = "Remote Starter";
+      make = _make;
+      model =_model;
+      year = _year;
+      price = _price;
+      heatedSeats = _heatedSeats;
+      remoteStart = _remoteStart;
+  }
+  public Car (String model3, String make3){
+      make = make3;
+      model = model3;
+      year = 2019;
+      price = 97755.99;
+      
+      randomNum2 = (int) (Math.random() * 3 + 1);
+      if(randomNum2==1){
+          heatedSeats = "Yes";
+          remoteStart = "No";
+      }else if(randomNum2==2){
+          remoteStart = "Yes";
+          heatedSeats = "No";
       }else{
-          heatedSeats = "Heated Seats!";
-          remoteStart = "Remote Starter";
-      }
+          heatedSeats = "Yes";
+          remoteStart = "Yes";
+      }   
+  }
+  
+  public void honkTheHorn(){
+    System.out.println("HONK! HONK!");
+}
+  public void littleHorn(){
+      System.out.println("Meep! Meep!");
+  }
+      
+  
+  public String toString() {
+      String output = "Make: " + make + "\n" +
+              "Model: "+ model + "\n" +
+              "Year: " + year + "\n" +
+              "HeatedSeats: " + heatedSeats + "\n" +
+              "Remote Starter: " + remoteStart + "\n" +
+              "Price: $" + price;
+      return output;
   }
   
 }
